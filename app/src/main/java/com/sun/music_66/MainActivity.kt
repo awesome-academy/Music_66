@@ -1,12 +1,12 @@
 package com.sun.music_66
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import com.sun.music_66.base.view.BaseActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
+    override fun getContentViewId(): Int = R.layout.activity_main
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
+    override fun initializeContainer() {}
+
+    override fun initializeComponents() {}
+
 }
