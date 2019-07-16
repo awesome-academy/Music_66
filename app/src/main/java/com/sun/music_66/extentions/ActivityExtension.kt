@@ -6,13 +6,8 @@ import androidx.fragment.app.FragmentTransaction
 import com.sun.music_66.base.view.BaseFragment
 import com.sun.music_66.constant.ScreenAnimation
 
-fun AppCompatActivity.addFragment(
-    newClass: Class<out BaseFragment>,
-    screenAnimation: ScreenAnimation,
-    containerViewId: Int,
-    isAddBackStack: Boolean,
-    isAddFragment: Boolean
-) {
+fun AppCompatActivity.addFragment(newClass: Class<out BaseFragment>, screenAnimation: ScreenAnimation,
+                                  containerViewId: Int, isAddFragment: Boolean, isAddBackStack: Boolean) {
     val tag = newClass.name
     var fragment = supportFragmentManager.findFragmentByTag(tag) as BaseFragment?
     val transaction = supportFragmentManager.beginTransaction()
@@ -38,10 +33,6 @@ fun AppCompatActivity.addFragment(
 }
 
 private fun setAnimation(transaction: FragmentTransaction, screenAnimation: ScreenAnimation) {
-    transaction.setCustomAnimations(
-        screenAnimation.enterToRight,
-        screenAnimation.exitToRight,
-        screenAnimation.enterToLeft,
-        screenAnimation.exitToLeft
-    )
+    transaction.setCustomAnimations(screenAnimation.enterToRight, screenAnimation.exitToRight,
+            screenAnimation.enterToLeft, screenAnimation.exitToLeft)
 }

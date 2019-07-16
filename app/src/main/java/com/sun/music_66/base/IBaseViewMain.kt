@@ -6,5 +6,4 @@ interface IBaseViewMain {
     fun initializeContainer()
 
     fun initializeComponents()
-
 }
