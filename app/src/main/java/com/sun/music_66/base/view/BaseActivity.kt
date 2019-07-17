@@ -20,7 +20,7 @@ abstract class BaseActivity : AppCompatActivity(), IBaseViewMain {
         super.onDestroy()
     }
 
-    open fun registerListeners(){}
+    open fun registerListeners() {}
 
-    open fun unregisterListeners(){}
+    open fun unregisterListeners() {}
 }
