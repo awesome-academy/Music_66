@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Music_66</string>
+    <string name="error_connect">Network not available</string>
 </resources>
