@@ -16,7 +16,7 @@ abstract class BaseFragment : Fragment(), IBaseViewMain {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        initializeContainer()
+        initializeData(savedInstanceState)
         initializeComponents()
         registerListeners()
     }

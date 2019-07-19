@@ -6,4 +6,5 @@
     <color name="color_gray_900">#212121</color>
     <color name="color_gray_500">#9E9E9E</color>
     <color name="color_gray_300">#E0E0E0</color>
+    <color name="color_gray_70">#B3212121</color>
 </resources>
