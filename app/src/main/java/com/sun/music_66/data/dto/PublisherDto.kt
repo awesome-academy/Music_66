@@ -2,6 +2,7 @@ package com.sun.music_66.data.dto
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import com.sun.music_66.util.PublisherEntity
 import kotlinx.android.parcel.Parcelize
 
 /**
@@ -9,6 +10,7 @@ import kotlinx.android.parcel.Parcelize
  * @author nguyen.xuan.hoi@sun-asterisk.com
  */
 @Parcelize
-data class PublisherDto(@SerializedName("id") val id: Int,
-                        @SerializedName("artist") val artist: String,
-                        @SerializedName("album_title") val albumTitle: String) : Parcelable
+data class PublisherDto(@SerializedName(PublisherEntity.ID) val id: Int,
+                        @SerializedName(PublisherEntity.ARTIST) val artist: String,
+                        @SerializedName(PublisherEntity.ALBUM_TITLE) val albumTitle: String) : Parcelable
+

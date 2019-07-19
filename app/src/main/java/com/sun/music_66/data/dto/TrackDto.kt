@@ -2,6 +2,7 @@ package com.sun.music_66.data.dto
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import com.sun.music_66.util.TrackEntity
 import kotlinx.android.parcel.Parcelize
 
 /**
@@ -10,15 +11,14 @@ import kotlinx.android.parcel.Parcelize
  */
 @Parcelize
 data class TrackDto(
-        @SerializedName("id") val id: String,
-        @SerializedName("full_duration") val fullDuration: Long,
-        @SerializedName("description") val description: String?,
-        @SerializedName("title") val title: String,
-        @SerializedName("artwork_url") val artWorkUrl: String,
-        @SerializedName("public") val isPublic: Boolean,
-        @SerializedName("streamable") val isStream: Boolean,
-        @SerializedName("download_url") val downloadUrl: String?,
-        @SerializedName("uri") val uri: String,
-        @SerializedName("likes_count") val likesCount: Int,
-        @SerializedName("publisher_metadata") val publisher: PublisherDto
-) : Parcelable
+        @SerializedName(TrackEntity.ID) val id: String,
+        @SerializedName(TrackEntity.FULL_DURATION) val fullDuration: Long,
+        @SerializedName(TrackEntity.DESCRIPTION) val description: String?,
+        @SerializedName(TrackEntity.TITLE) val title: String,
+        @SerializedName(TrackEntity.ARTWORK_URL) val artWorkUrl: String,
+        @SerializedName(TrackEntity.PUBLIS) val isPublic: Boolean,
+        @SerializedName(TrackEntity.STREAMABLE) val isStream: Boolean,
+        @SerializedName(TrackEntity.DOWNLOAD_URL) val downloadUrl: String?,
+        @SerializedName(TrackEntity.LIKES_COUNT) val likesCount: Int,
+        @SerializedName(TrackEntity.PUBLISHER) val publisher: PublisherDto,
+        @SerializedName(TrackEntity.DOWNLOADABLE) val isDownload: Boolean) : Parcelable

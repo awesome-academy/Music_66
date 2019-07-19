@@ -26,6 +26,11 @@ abstract class BaseFragment : Fragment(), IBaseViewMain {
         super.onDestroyView()
     }
 
+    /** Handle Exception to show message */
+    fun handleBusinessException(throwable: Throwable) {
+        (activity as BaseActivity).handleBusinessException(throwable)
+    }
+
     /** true if Back button was handled. */
     open fun onBackPressed(): Boolean = false
 
