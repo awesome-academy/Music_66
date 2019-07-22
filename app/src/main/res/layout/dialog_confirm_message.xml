@@ -38,12 +38,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
-            android:text="@string/disagree"
+            android:text="@string/option_dialog_disagree"
             android:textAllCaps="false"
             android:textColor="@color/color_primary" />
 
         <View
-            android:layout_width="1dp"
+            android:layout_width="@dimen/_1dp"
             android:layout_height="match_parent"
             android:background="@color/color_gray_300" />
 
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
-            android:text="@string/agree"
+            android:text="@string/option_dialog_agree"
             android:textAllCaps="false"
             android:textColor="@color/color_primary" />
     </LinearLayout>

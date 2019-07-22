@@ -14,7 +14,7 @@ abstract class BaseActivity : AppCompatActivity(), IBaseViewMain {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(getContentViewId())
-        initializeContainer()
+        initializeData(savedInstanceState)
         initializeComponents()
         registerListeners()
 
