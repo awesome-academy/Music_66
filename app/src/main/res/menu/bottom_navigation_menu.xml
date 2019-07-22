@@ -10,13 +10,13 @@
 
     <item
         android:id="@+id/navigation_library"
-        android:icon="@drawable/ic_library_music_black_24dp"
+        android:icon="@drawable/ic_library_music"
         android:title="@string/title_library"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/navigation_setting"
-        android:icon="@drawable/ic_settings_black_24dp"
+        android:icon="@drawable/ic_settings_black"
         android:title="@string/title_settings"
         app:showAsAction="ifRoom" />
 

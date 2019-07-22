@@ -7,7 +7,7 @@ jobs:
     environment:
       JVM_OPTS: -Xmx3200m
       # This is Android review pull request box (Not necessary to change)
-      ROOM_ID: "96370317"
+      ROOM_ID: ""
       # Insert the chatwork accounts which you want to mention when the pull request was verified
       MEMBERS: "[To:3960602] Nguyen Xuan Hoi (Private)"
     steps:

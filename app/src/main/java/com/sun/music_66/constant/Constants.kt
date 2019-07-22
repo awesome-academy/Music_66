@@ -7,6 +7,7 @@ package com.sun.music_66.constant
 interface Constants {
     companion object {
         const val TIME_DELAY = 2000L
+        const val DATA_GENRES="genres.json"
         const val BASE_GENRE_URL = "https://api-v2.soundcloud.com/charts?kind=%s&genre=%s&client_id=%s&limit=%d&offset=%d"
         const val BASE_SEARCH_URL = "http://api.soundcloud.com/tracks?q=%s&client_id=%s&limit=%d&offset=%d"
         const val BASE_DOWNLOAD_URL = "https://api.soundcloud.com/tracks/%d/download?client_id=%s"

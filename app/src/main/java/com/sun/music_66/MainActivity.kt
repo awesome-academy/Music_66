@@ -2,7 +2,6 @@ package com.sun.music_66
 
 import android.app.WallpaperManager
 import android.graphics.drawable.Drawable
-import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.viewpager.widget.ViewPager
@@ -16,7 +15,7 @@ import com.sun.music_66.view.adapter.ViewpagerFragmentAdapter
 import kotlinx.android.synthetic.main.activity_home.*
 
 class MainActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelectedListener,
-    ViewPager.OnPageChangeListener {
+        ViewPager.OnPageChangeListener {
 
     override fun getContentViewId(): Int = R.layout.activity_home
 
@@ -36,15 +35,13 @@ class MainActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelect
         val wallpaperDrawable = wallpaperManager.drawable
         Glide.with(this).load(wallpaperDrawable).into(object : SimpleTarget<Drawable>() {
             override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                    rootEveryThing.background = resource
-                }
+                constraintRoot.background = resource
             }
         })
     }
 
     override fun registerListeners() {
-        bottom_navigation_view.setOnNavigationItemSelectedListener(this)
+        bottomNavigation.setOnNavigationItemSelectedListener(this)
         viewPager.addOnPageChangeListener(this)
     }
 
@@ -73,7 +70,7 @@ class MainActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelect
     }
 
     override fun onPageSelected(position: Int) {
-        bottom_navigation_view.menu.getItem(position).isChecked = true
+        bottomNavigation.menu.getItem(position).isChecked = true
     }
 
     override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {

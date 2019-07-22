@@ -1,4 +1,4 @@
-package com.sun.music_66.view
+package com.sun.music_66.view.genres
 
 import android.os.Bundle
 import com.sun.music_66.R

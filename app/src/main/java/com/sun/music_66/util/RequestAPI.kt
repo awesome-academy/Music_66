@@ -6,6 +6,7 @@ import com.sun.music_66.data.remote.ResponseInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.logging.HttpLoggingInterceptor
+import java.io.IOException
 import java.util.concurrent.TimeUnit
 /**
  * Created by nguyenxuanhoi on 2019-07-17.
@@ -33,11 +34,11 @@ object RequestAPI {
         return builder.build()
     }
 
+    @Throws(IOException::class)
     fun receiver(url: String): String {
         val request = Request.Builder()
-                .url(url)
-                .build()
-        val res = createOkHttpClient().newCall(request).execute()
-        return res.body().toString()
+            .url(url)
+            .build()
+        createOkHttpClient().newCall(request).execute().use { response -> return response.body()!!.string() }
     }
 }
