@@ -3,7 +3,7 @@ package com.sun.music_66.view.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.sun.music_66.view.GenreFragment
+import com.sun.music_66.view.genres.GenreFragment
 import com.sun.music_66.view.LibraryFragment
 import com.sun.music_66.view.SettingFragment
 
