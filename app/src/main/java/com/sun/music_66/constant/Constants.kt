@@ -20,5 +20,8 @@ interface Constants {
         const val GENRES_AMBIENT = "soundcloud:genres:ambient"
         const val GENRES_CLASSICAL = "soundcloud:genres:classical"
         const val GENRES_COUNTRY = "soundcloud:genres:country"
+        const val ARGUMENT_GENRES = "ARGUMENT_GENRES"
+        const val BASE_TRENDING_URL = "https://api-v2.soundcloud.com/charts?kind=%s&genre=%s&client_id=%s"
+
     }
 }

@@ -8,4 +8,5 @@
     <dimen name="_150dp">150dp</dimen>
     <dimen name="_30dp">30dp</dimen>
     <dimen name="_50dp">50dp</dimen>
+    <dimen name="_80dp">80dp</dimen>
 </resources>

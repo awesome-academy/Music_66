@@ -8,4 +8,4 @@ import kotlinx.android.parcel.Parcelize
  * @author nguyen.xuan.hoi@sun-asterisk.com
  */
 @Parcelize
-data class GenreDto(val id:String,val nameGenre:String,val image:String) : Parcelable
+data class GenreDto(val id:String,val nameGenre:String,val image:Int) : Parcelable
