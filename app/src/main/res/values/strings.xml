@@ -18,4 +18,11 @@
     <string name="text_ambient">Ambient</string>
     <string name="text_classical">Classical</string>
     <string name="text_country">Country</string>
+    <string name="playing_notification_description">The playing notification provides actions for play/pause etc.</string>
+    <string name="playing_notification_name">Playing notification</string>
+    <string name="action_play_next">Play next</string>
+    <string name="action_play">Play</string>
+    <string name="action_play_pause">Play/Pause</string>
+    <string name="action_previous">Previous</string>
+    <string name="action_next">Next</string>
 </resources>
