@@ -6,6 +6,10 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 28
+    def versionPropertiesFile = file('key.properties')
+    Properties versionProperties = new Properties()
+    versionProperties.load(new FileInputStream(versionPropertiesFile))
+    def CLIENT_ID = versionProperties['CLIENT_ID'].toString()
     defaultConfig {
         applicationId "com.sun.music_66"
         minSdkVersion 21
@@ -13,7 +17,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "CLIENT_ID", "\"a7Ucuq0KY8Ksn8WzBG6wj4x6pcId6BpU\""
+        buildConfigField "String", "CLIENT_ID", CLIENT_ID
     }
     buildTypes {
         release {
