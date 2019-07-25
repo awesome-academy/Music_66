@@ -11,6 +11,9 @@ object StringUtils {
     fun generateGenreUrl(kind: String, genre: String, limit: Int, offset: Int): String =
         String.format(Constants.BASE_GENRE_URL, kind, genre, BuildConfig.CLIENT_ID, limit, offset)
 
+    fun generateTredingUrl(kind: String, genre: String): String =
+            String.format(Constants.BASE_TRENDING_URL, kind, genre, BuildConfig.CLIENT_ID)
+
     fun generateSearchUrl(query: String, limit: Int, offset: Int): String =
         String.format(Constants.BASE_SEARCH_URL, query, BuildConfig.CLIENT_ID, limit, offset)
 

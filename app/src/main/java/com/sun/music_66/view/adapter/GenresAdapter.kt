@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.item_genres.view.*
  * @author nguyen.xuan.hoi@sun-asterisk.com
  */
 class GenresAdapter(private val onItemClicked: (genres: GenreDto) -> Unit) :
-        RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var genres = emptyList<GenreDto>()
 
@@ -24,10 +24,10 @@ class GenresAdapter(private val onItemClicked: (genres: GenreDto) -> Unit) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =
-            ViewHolder(
-                    LayoutInflater.from(parent.context)
-                            .inflate(R.layout.item_genres, parent, false), onItemClicked
-            )
+        ViewHolder(
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_genres, parent, false), onItemClicked
+        )
 
     override fun getItemCount(): Int = genres.size
 
