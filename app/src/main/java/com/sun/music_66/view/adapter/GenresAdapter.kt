@@ -19,7 +19,7 @@ class GenresAdapter(private val onItemClicked: (genres: GenreDto) -> Unit) :
     private var genres = emptyList<GenreDto>()
 
     fun submitList(data: List<GenreDto>) {
-        this.genres = data as ArrayList<GenreDto>
+        this.genres = data
         notifyDataSetChanged()
     }
 
