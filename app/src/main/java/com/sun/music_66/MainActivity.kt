@@ -12,10 +12,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.sun.music_66.base.view.BaseActivity
 import com.sun.music_66.constant.CurrentItem
 import com.sun.music_66.view.adapter.ViewpagerFragmentAdapter
+import com.sun.music_66.view.genres.GenreFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
 class MainActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelectedListener,
         ViewPager.OnPageChangeListener {
+    private lateinit var adapter: ViewpagerFragmentAdapter
 
     override fun getContentViewId(): Int = R.layout.activity_home
 
@@ -25,7 +27,7 @@ class MainActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelect
 
     override fun initializeComponents() {
         initBackground()
-        val adapter = ViewpagerFragmentAdapter(supportFragmentManager)
+        adapter = ViewpagerFragmentAdapter(supportFragmentManager)
         viewPager.adapter = adapter
 
     }
@@ -75,6 +77,16 @@ class MainActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelect
 
     override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
 
+    }
+    override fun onBackPressed() {
+        if (viewPager.currentItem != 0) {
+            viewPager.currentItem = 0
+            return
+        }
+        if (viewPager.currentItem == 0) {
+            if ((adapter.getItem(viewPager.currentItem) as GenreFragment).popStack()) return
+            super.onBackPressed()
+        }
     }
 
 }
