@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/image_track"
+        android:layout_width="@dimen/dp_128"
+        android:layout_height="@dimen/dp_128"
+        android:adjustViewBounds="true"
+        android:padding="@dimen/_8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_avata_default" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textTrack"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent.Title" />
+
+        <TextView
+            android:id="@+id/textArtist"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTrack"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent.Title" />
+
+        <ImageButton
+            android:id="@+id/imagePrevious"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_below="@+id/textArtist"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_8dp"
+            android:src="@drawable/ic_skip_previous" />
+
+        <ImageButton
+            android:id="@+id/imagePlayMusic"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_below="@+id/textArtist"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_toEndOf="@+id/imagePrevious"
+            android:src="@drawable/ic_play_music" />
+
+        <ImageButton
+            android:id="@+id/imageNext"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_below="@+id/textArtist"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_toEndOf="@+id/imagePlayMusic"
+            android:src="@drawable/ic_skip_next" />
+
+        <ImageButton
+            android:id="@+id/imageClear"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_below="@+id/textArtist"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_toEndOf="@+id/imageNext"
+            android:src="@drawable/ic_clear" />
+    </RelativeLayout>
+</LinearLayout>
