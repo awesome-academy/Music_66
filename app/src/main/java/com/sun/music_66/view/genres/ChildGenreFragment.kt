@@ -21,15 +21,6 @@ import java.util.*
  * @author nguyen.xuan.hoi@sun-asterisk.com
  */
 class ChildGenreFragment : BaseFragment(), TrackContract.View {
-    override fun onSuccess(data: List<TrackDto>) {
-        initViewPager(data)
-
-    }
-
-    override fun onFailed(throwable: Throwable) {
-        handleBusinessException(throwable)
-
-    }
 
     private lateinit var timer: Timer
 
@@ -97,6 +88,16 @@ class ChildGenreFragment : BaseFragment(), TrackContract.View {
                 }
             }
         }, Constants.TIME_DELAY, Constants.TOTAL_TIME)
+
+    }
+
+    override fun onSuccess(data: List<TrackDto>) {
+        initViewPager(data)
+
+    }
+
+    override fun onFailed(throwable: Throwable) {
+        handleBusinessException(throwable)
 
     }
 
